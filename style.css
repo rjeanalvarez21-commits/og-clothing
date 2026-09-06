@@ -1,5 +1,3 @@
-Hazlo más fácil: reemplaza todo el contenido de tu archivo style.css por este código:
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,20 +6,22 @@ Hazlo más fácil: reemplaza todo el contenido de tu archivo style.css por este 
 
 body {
     font-family: Arial, sans-serif;
-    background: white;
-    color: #111;
-}
-
-header {
-    background: #111;
-    color: white;
-    padding: 25px 0;
+    background-color: #ffffff;
+    color: #111111;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+}
+
+/* ENCABEZADO */
+
+header {
+    background-color: #111111;
+    color: white;
+    padding: 25px 0 60px;
 }
 
 .menu {
@@ -39,21 +39,39 @@ header {
 
 .navbar ul {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     list-style: none;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
+    font-size: 16px;
 }
+
+.navbar a:hover {
+    color: #cccccc;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icono {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* CONTENIDO PRINCIPAL */
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
-    padding: 60px 0;
+    gap: 40px;
+    padding-top: 60px;
 }
 
 .header-text {
@@ -61,13 +79,14 @@ header {
 }
 
 .header-text h1 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 20px;
 }
 
 .header-text p {
+    font-size: 17px;
     line-height: 1.6;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .header-img {
@@ -76,37 +95,58 @@ header {
 
 .header-img img {
     width: 100%;
+    max-height: 400px;
+    object-fit: cover;
     border-radius: 10px;
 }
+
+/* BOTONES */
 
 .btn-1,
 .btn-2 {
     display: inline-block;
-    padding: 12px 20px;
-    background: #111;
+    padding: 12px 22px;
+    background-color: #111111;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
 }
 
+.btn-1 {
+    background-color: white;
+    color: #111111;
+}
+
+.btn-1:hover,
+.btn-2:hover {
+    opacity: 0.75;
+}
+
+/* PRODUCTOS */
+
 .productos-seccion {
-    padding: 50px 5%;
+    padding: 60px 5%;
 }
 
 .productos-seccion h2 {
+    margin-bottom: 35px;
     text-align: center;
-    margin-bottom: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 .productos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .producto {
     padding: 20px;
-    background: #f1f1f1;
+    background-color: #f1f1f1;
     text-align: center;
     border-radius: 10px;
 }
@@ -119,28 +159,37 @@ header {
 }
 
 .producto h3 {
-    margin: 15px 0 10px;
+    margin: 18px 0 10px;
+    font-size: 20px;
 }
 
 .producto p {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    line-height: 1.5;
 }
 
 .producto span {
     display: block;
-    margin-top: 15px;
+    margin-top: 18px;
+    font-size: 18px;
     font-weight: bold;
 }
 
+/* PIE DE PÁGINA Y CONTACTO */
+
 footer {
-    padding: 40px 20px;
-    background: #111;
+    padding: 45px 20px;
+    background-color: #111111;
     color: white;
     text-align: center;
 }
 
-footer h2,
+footer h2 {
+    margin-bottom: 20px;
+}
+
 footer h3 {
+    margin-top: 25px;
     margin-bottom: 15px;
 }
 
@@ -160,9 +209,30 @@ footer p {
     text-decoration: none;
 }
 
+.redes-sociales a:hover {
+    text-decoration: underline;
+}
+
+/* DISEÑO PARA CELULAR */
+
 @media (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
     .header-content {
         flex-direction: column;
+        text-align: center;
     }
 
     .header-text,
@@ -170,11 +240,20 @@ footer p {
         width: 100%;
     }
 
+    .header-text h1 {
+        font-size: 32px;
+    }
+
     .productos-grid {
         grid-template-columns: 1fr;
     }
 
-    .navbar ul {
-        display: none;
+    .producto img {
+        height: 300px;
+    }
+
+    .redes-sociales {
+        flex-direction: column;
+        gap: 10px;
     }
 }
