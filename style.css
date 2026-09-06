@@ -1,0 +1,180 @@
+Hazlo más fácil: reemplaza todo el contenido de tu archivo style.css por este código:
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #111;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 25px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 60px 0;
+}
+
+.header-text {
+    width: 50%;
+}
+
+.header-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.header-text p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.header-img {
+    width: 45%;
+}
+
+.header-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn-1,
+.btn-2 {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.productos-seccion {
+    padding: 50px 5%;
+}
+
+.productos-seccion h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.producto {
+    padding: 20px;
+    background: #f1f1f1;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.producto img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    margin: 15px 0 10px;
+}
+
+.producto p {
+    margin-bottom: 15px;
+}
+
+.producto span {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    padding: 40px 20px;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+footer h2,
+footer h3 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .header-text,
+    .header-img {
+        width: 100%;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+}
